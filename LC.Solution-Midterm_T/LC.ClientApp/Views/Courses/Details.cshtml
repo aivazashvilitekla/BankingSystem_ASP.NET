@@ -1,0 +1,53 @@
+﻿@using LC.Models.DataViewModels.CourseManagement
+@model CourseDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurriculumID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurriculumID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnouncementDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnnouncementDate)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

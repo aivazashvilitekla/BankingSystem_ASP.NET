@@ -1,0 +1,88 @@
+﻿@using LC.Models.DataViewModels
+@model IEnumerable<PersonDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Persons</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuarantorID)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuarantorID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDNumber }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IDNumber }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDNumber })
+            </td>
+        </tr>
+    }
+
+</table>
